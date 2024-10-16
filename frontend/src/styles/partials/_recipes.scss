@@ -1,0 +1,275 @@
+// Styles for the Create Recipe Section
+.create-recipe {
+    margin: 0.5em 0.5em; // Increased margin for better spacing
+    display: grid;
+    gap: 0.5em; // Increased gap for clearer separation
+
+    .btn {
+        display: block;  
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.75em 1.5em;  
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+
+        // Change background color on hover
+        &:hover {
+            background-color: var(--primary-color);
+        }
+    }
+
+    // Styles for the modal dialog
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+
+        .modal-content {
+            background-color: white;
+            padding: 2em;
+            border-radius: 5px;
+            position: relative;
+            width: 90%;  
+            max-width: 500px;
+
+            .close {
+                position: absolute;
+                top: 1em;
+                right: 1em;
+                cursor: pointer;
+                font-size: 1.5em;
+                color: var(--primary-color); 
+            }
+
+            h2 {
+                margin-bottom: 1em;  
+                text-align: center;  
+            }
+
+            // Styles for the recipe form
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input,
+                textarea,
+                select {
+                    margin-bottom: 1.5em;  
+                    padding: 0.75em;  
+                    border: 1px solid #ccc;
+                    border-radius: 4px;  
+                    font-size: 1em;  
+                }
+
+                // Styles for input steps
+                .step-input {
+                    display: flex;
+                    align-items: center;  
+                    margin-bottom: 1em;
+
+                    input {
+                        flex: 1;
+                        margin-right: 0.5em;  
+                        padding: 0.5em;  
+                        border-radius: 4px;  
+                    }
+
+                    .remove-step-btn {
+                        border: none;
+                        border-radius: 5px;
+                        padding: 0.5em 1em;
+                        cursor: pointer;
+
+                        // Change button color on hover
+                        &:hover {
+                            background-color: darken(#ff4d4d, 10%);
+                        }
+                    }
+                }
+
+                // Style for adding a step button
+                .add-step-btn {
+                    margin-bottom: 1em;
+                }
+            }
+
+            // Button for adding the recipe
+            .add-recipe-btn {
+                margin-top: 1em;
+            }
+        }
+    }
+}
+
+// Styles for displaying previous searches
+.previous-searches {
+    display: block;
+    margin: 2em 0;
+    
+    h2 {
+        color: var(--text-color);
+        margin-bottom: 1em;
+    }
+
+    .previous-searches-container {
+        .search-item {
+            background-color: var(--primary-color);
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em 1em 0;
+            color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 3px 6px var(--shadow-color);
+            opacity: 0;
+            animation: slideInRight 0.5s forwards;
+
+            // Animation for search items
+            @keyframes slideInRight {
+                0% {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Styles for the search box
+.search-box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+
+    .search-input {
+        display: flex;
+        align-items: center;
+
+        input {
+            min-width: 400px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            border: 1px solid var(--shadow-color);
+            padding: 0 10px;
+            text-align: center;
+            height: 35px;
+            flex: 1;
+        }
+
+        .btn {
+            padding-block: 0;
+            padding-inline: 0.75em;
+            border-radius: 0 5px 5px 0;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            height: 35px;
+
+            // Change background color on hover
+            &:hover {
+                background-color: var(--primary-color);
+            }
+        }
+    }
+
+    // Styles for tab options
+    .tab-options {
+        display: flex;
+        margin-top: 0.5em;
+
+        .tab {
+            border: none;
+            background-color: var(--shadow-color);
+            color: white;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+
+            // Highlight active tab
+            &.active {
+                background-color: var(--primary-color);
+            }
+        }
+    }
+
+    // Styles for additional options like filters
+    .options {
+        display: flex;
+        margin-top: 0.5em;
+
+        select {
+            border: 1px solid var(--shadow-color);
+            border-radius: 5px;
+            padding: 0 10px;
+            height: 35px;
+        }
+    }
+}
+
+// General styles for headings and descriptions
+.section-title {
+    font-size: 2rem; 
+    margin-bottom: 0.5em; 
+    text-align: center; 
+}
+
+.section-description {
+    font-size: 1.1rem; 
+    color: var(--text-light); 
+    margin-top: 0.5em;
+    margin-bottom: 1em; 
+    text-align: center; 
+}
+
+.section-title-prev {
+    font-size: 1.5em; 
+    margin-bottom: 0.5em; 
+    text-align: left; 
+}
+.section-description-prev {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    color: var(--text-light); 
+    text-align: left; 
+}
+
+.section-title-search {
+    font-size: 1.5em; 
+    margin-bottom: 0.5em; 
+    text-align: left; 
+}
+.section-description-search {
+    font-size: 1em; 
+    color: var(--text-light); 
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.section-title-list {
+    font-size: 1.5em; 
+    text-align: left; 
+}
+
+
+hr {
+    border: none; // Remove default border
+    height: 2px; // Set height
+    background-color: var(--shadow-color); // Match the color to your design
+    margin: 1.5em 0; // Add margin for spacing above and below
+}
