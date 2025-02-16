@@ -1,0 +1,35 @@
+/* .previous-searches {
+    display: block;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    h2 {
+        color: var(--text-color);
+        margin-bottom: 1em;
+    }
+
+    .previous-searches-container {
+        .search-item {
+            background-color: var(--primary-color);
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em 1em 0;
+            color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 3px 6px var(--shadow-color);
+            opacity: 0;
+            animation: slideInRight 0.5s forwards;
+
+            @keyframes slideInRight {
+                0% {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+*/

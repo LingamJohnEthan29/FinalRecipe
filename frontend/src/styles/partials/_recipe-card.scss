@@ -1,0 +1,50 @@
+.recipe-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px var(--shadow-color);
+    margin-bottom: 1.5em;
+    animation: popIn 0.5s ease forwards;
+
+    .recipe-card-info {
+        padding: 15px;
+
+        // Added styles for cuisine display
+        .recipe-cuisine {
+            color: var(--text-light); // Use the same color as the recipe description
+            font-size: 0.9em; // Match the font size with the description
+            margin: 0.5em 0; // Add some margin for spacing
+        }
+    }
+
+    .custom-image {
+        z-index: -1;
+        width: 100%;
+        height: auto;
+    }
+
+    .recipe-title {
+        font-size: 1.25em;
+        font-weight: bold;
+        margin: 0.5em 0;
+        color: var(--text-color);
+    }
+
+    .recipe-desc {
+        color: var(--text-light);
+        font-size: 0.9em;
+        letter-spacing: 1px;
+    }
+
+    .view-btn {
+        font-size: 1em;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-top: 0.5em;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.cuisines {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    max-width: 100%;
+    padding: 20px; // Added padding for better spacing inside the container
+
+    h1 {
+        text-align: center;
+        color: var(--text-color);
+        font-size: 1.75rem; // Slightly smaller font size for the title
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        text-align: center; // Center align the description
+        font-size: 1rem; // Adjusted to a smaller size for better balance
+        line-height: 1.4; // Reduced line height for a more compact look
+        color: var(--text-light);
+    }
+
+    .cuisine-category {
+        margin-bottom: 1.5em; // Added margin to separate categories
+
+        h2 {
+            font-size: 1.25rem; // Smaller font size for category headings
+            color: var(--text-color);
+            padding-bottom: 8px; // Reduced padding for a tighter layout
+        }
+
+        .cuisine-description {
+            font-size: 0.9rem; // Smaller font size for cuisine descriptions
+            color: var(--text-light); 
+            text-align: justify; 
+            margin-bottom: 0.8em; // Reduced margin for compactness
+        }
+
+        .recipe-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; // Space between cards
+            justify-content: center;
+        }
+        
+        .recipe-card {
+            width: 250px; // Fixed width for uniformity
+            height: 350px; // Fixed height for uniformity
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px var(--shadow-color);
+            margin-bottom: 1.5em;
+            margin-top: 0.5em;
+            animation: popIn 0.5s ease forwards;
+            display: flex;
+            flex-direction: column; // To stack child elements vertically
+        
+            .recipe-card-info {
+                padding: 15px;
+                flex: 1; // Allow this section to grow and fill the card
+        
+                .recipe-cuisine {
+                    color: var(--text-light);
+                    font-size: 0.9em;
+                    margin: 0.5em 0;
+                }
+            }
+        
+            .custom-image {
+                z-index: -1;
+                width: 100%;
+                height: auto;
+                flex-shrink: 0; // Prevent the image from shrinking
+            }
+        
+            .recipe-title {
+                font-size: 1.25em;
+                font-weight: bold;
+                margin: 0.5em 0;
+                color: var(--text-color);
+            }
+        
+            .recipe-desc {
+                color: var(--text-light);
+                font-size: 0.9em;
+                letter-spacing: 1px;
+                flex-grow: 1; // Allow description to grow to fill space
+            }
+        
+            .view-btn {
+                font-size: 1em;
+                font-weight: bold;
+                color: var(--primary-color);
+                margin-top: 0.5em;
+                display: inline-block;
+                text-decoration: none;
+        
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+}
